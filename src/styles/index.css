@@ -1,0 +1,168 @@
+@import url(./reset.css);
+
+@font-face {
+  font-family: Roboto, sans-serif;
+  src: url('../static/Roboto-Regular.ttf');
+}
+
+html {
+  font-size: 10px; 
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* COMMON */
+h1 {
+  font-size: 2.7rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+a {
+  display: block;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: black;
+  line-height: 1.5rem;
+}
+
+a:hover {
+  color: darkgray;
+} 
+
+input[type='text'] {
+  border: 1px solid gray;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  margin: 1rem;
+  max-width: 20rem;
+}
+
+
+/* Mobile (tablet) first) */ 
+.App {
+  height: 100vh;
+  width: 100%;
+  background-color: lightblue;
+}
+
+.container {
+  width: 100%;
+  background:	#eeeeee;
+}
+
+/*-- HEADER --*/
+header {
+  box-sizing: border-box;
+  padding: 0rem 1rem;
+  min-height: 10rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background:	#eeeedd;
+}
+
+nav {
+  margin: 1rem;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 1rem;
+}
+
+.logo {
+  padding: 1rem;
+  width: 6.4rem;
+  height: 6.4rem;
+}
+
+#main {
+  width: 100%;
+}
+
+/*-- FOOTER --*/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  box-sizing: border-box;
+  padding: 1rem;
+  min-height: 15rem;
+  background: #35414c;
+  
+  color: lightgray;
+}
+
+footer div {
+  padding: 1rem;
+}
+
+.footer-title {
+  margin: 1.5rem 0;
+}
+
+.footer-list li {
+  margin: 0.5rem 0;
+}
+
+.footer-list a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.footer-list a:hover {
+  cursor: pointer;
+  color: darkgray;
+  text-decoration: underline;
+}
+
+
+
+/* Desktop */
+@media all and (min-width: 990px) {
+
+  .App {
+    background-image: url('../static/wallpaper-background.jpg');
+  }
+
+  .container {
+    width: 99rem;
+    margin: 0 auto;
+    background: lightyellow;
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  };
+
+  #main {}
+}
+
+
+
+
