@@ -7,6 +7,10 @@ import {
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import About from './pages/About';
+import Novels from './pages/Novels';
+import ScienceFiction from './pages/ScienceFiction';
+import Comics from './pages/Comics';
 
 
 function App() {
@@ -17,7 +21,11 @@ function App() {
           <Header />
           <div id="main">
             <Switch>
-              <Route path='/' component={Home} />
+              <Route exact path='/' component={Home} />
+              <Route path='/comics' component={Comics} />
+              <Route path='/sci-fi' component={ScienceFiction} />
+              <Route path='/novels' component={Novels} />
+              <Route path='/about' component={About} />
             </Switch>
           </div>
           <Footer />

@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-function Home() {
+function Novels() {
   return (
     <div className='page'>
-      ;lskfg;lsdkf;lk;dslk
+      
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Novels;

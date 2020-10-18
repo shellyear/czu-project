@@ -21,10 +21,17 @@ body {
 /* COMMON */
 h1 {
   font-size: 2.7rem;
+  font-weight: bold;
 }
 
 h2 {
   font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 p {
@@ -79,7 +86,7 @@ header {
 }
 
 nav {
-  margin: 1rem;
+  margin: 1rem 0 2rem 0;
 }
 
 .menu {
@@ -91,15 +98,33 @@ nav {
   margin-right: 1rem;
 }
 
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .logo {
   padding: 1rem;
   width: 6.4rem;
   height: 6.4rem;
 }
 
+/*-- MAIN CONTENT --*/
+
 #main {
+  box-sizing: border-box;
   width: 100%;
+  background: lightyellow;
+  padding: 1rem 1rem;
 }
+
+.page {
+  min-height: 70vh;
+}
+
+
+
 
 /*-- FOOTER --*/
 footer {
@@ -152,6 +177,7 @@ footer div {
     width: 99rem;
     margin: 0 auto;
     background: lightyellow;
+    border-radius: 0.5rem;
   }
 
   header {
@@ -160,7 +186,9 @@ footer div {
     justify-content: space-between;
   };
 
-  #main {}
+  #main {
+    padding: 2rem 2rem;
+  }
 }
 
 
