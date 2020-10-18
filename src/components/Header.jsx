@@ -8,7 +8,7 @@ function Header() {
     <header>
       <div className='logo-wrapper'>
         <img className='logo' src={ShopLogo} />
-        <h3>Book E-shop</h3>
+        <h3 className='logo-title'>Book E-shop</h3>
       </div>
       <input type="text" placeholder="Hledejte knížky.." />
       <nav>
