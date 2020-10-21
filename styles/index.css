@@ -145,7 +145,7 @@ footer {
   color: lightgray;
 }
 
-footer div {
+footer .footer-block {
   padding: 1rem;
 }
 
@@ -188,6 +188,7 @@ footer div {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 0 4rem;
   };
 
   #main {
