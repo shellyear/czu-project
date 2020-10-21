@@ -125,10 +125,115 @@ nav {
 
 .page {
   min-height: 70vh;
+  padding: 2rem;
 }
 
+.page-title {
+  text-align: center;
+  margin-bottom: 4rem;  
+}
 
+.book-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 1rem;
+  grid-row-gap: 3rem;
+}
 
+.book-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: white;
+  max-height: 34rem;
+  width: 25rem;
+  background:	#eeeedd;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  animation: hoverAnim;
+  transform: translate(0, -0.5rem);
+  transition: all 0.5s ease-in-out;
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.book-img {
+  width: 20rem;
+  height: 20rem;
+}
+
+.book-content {
+  box-sizing: border-box;
+  height: 10rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.book-title {
+  font-size: 1.6rem;
+}
+
+.book-card p {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  background: gray;
+  color:white;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.button:hover {
+  background: lightgray;
+  color: black;
+}
+
+.button-inner {
+  display: block;
+  font-size: 2rem;
+  line-height: 0;
+}
+
+.text {
+  font-size: 1.6rem;
+  word-spacing: 1.2rem/1.6rem;
+  line-height: 2rem;
+}
+
+.contact {
+  box-sizing: border-box;
+  font-size: 2rem;
+  margin: 2rem 0;
+  border: 1px solid darkgray;
+}
+
+.contact-logo {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-right: 1.5rem;
+}
+
+.contact td {
+  padding: 1rem;
+}
+
+.contact .main-row {
+  border-bottom: 1px solid darkgray;
+}
 
 /*-- FOOTER --*/
 footer {
@@ -194,6 +299,15 @@ footer .footer-block {
   #main {
     padding: 2rem 2rem;
   }
+
+  .page {
+    padding: 4rem;
+  }
+
+  .book-container {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+  
 }
 
 
