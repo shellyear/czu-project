@@ -14,7 +14,7 @@
             <img class='logo' src="./static/book-shop.png" />
             <h3 class='logo-title'>Book E-shop</h3>
           </div>
-          <input type="text" placeholder="Hledejte knížky.." />
+          <input class="search-bar"  type="text" placeholder="Hledejte knížky.." />
           <nav>
             <ul class="menu">
               <li>
@@ -27,7 +27,7 @@
                 <a href='sci-fi.html'>Vědecké publikace</a>
               </li>
               <li>
-                <a href='comics.html'>Komiksy</a>
+                <a class="active" href='comics.html'>Komiksy</a>
               </li>
               <li>
                 <a href='about.html'>O nás</a>
@@ -46,13 +46,13 @@
                 <section class="book-content">
                   <h3 class="book-title">Jaws</h2>
                   <p>Autor: Peter Benchley<p>
-                  <p>Rok vydání: 1998<p>
+                  <p>Cena: 1000 kč</p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
@@ -61,13 +61,13 @@
                 <section class="book-content">
                   <h3 class="book-title">Jaws</h2>
                   <p>Autor: Peter Benchley<p>
-                  <p>Rok vydání: 1998<p>
+                  <p>Cena: 1000 kč</p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
@@ -76,13 +76,13 @@
                 <section class="book-content">
                   <h3 class="book-title">Jaws</h2>
                   <p>Autor: Peter Benchley<p>
-                  <p>Rok vydání: 1998<p>
+                  <p>Cena: 1000 kč</p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
@@ -91,13 +91,13 @@
                 <section class="book-content">
                   <h3 class="book-title">Jaws</h2>
                   <p>Autor: Peter Benchley<p>
-                  <p>Rok vydání: 1998<p>
+                  <p>Cena: 1000 kč</p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
@@ -106,13 +106,13 @@
                 <section class="book-content">
                   <h3 class="book-title">Jaws</h2>
                   <p>Autor: Peter Benchley<p>
-                  <p>Rok vydání: 1998<p>
+                  <p>Cena: 1000 kč</p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
@@ -121,15 +121,23 @@
                 <section class="book-content">
                   <h3 class="book-title">Jaws</h2>
                   <p>Autor: Peter Benchley<p>
-                  <p>Rok vydání: 1998<p>
+                  <p>Cena: 1000 kč</p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
             </div>
+          </div>
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+
           </div>
         </div>
         <footer>
@@ -178,5 +186,6 @@
           </div>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
