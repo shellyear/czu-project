@@ -14,11 +14,11 @@
             <img class='logo' src="./static/book-shop.png" />
             <h3 class='logo-title'>Book E-shop</h3>
           </div>
-          <input type="text" placeholder="Hledejte knížky.." />
+          <input class="search-bar" type="text" placeholder="Hledejte knížky.." />
           <nav>
             <ul class="menu">
               <li>
-                <a href='/'>Hlavní</a>
+                <a class='active' href='/'>Hlavní</a>
               </li>
               <li>
                 <a href='novels.html'>Romány</a>
@@ -48,11 +48,11 @@
                   <p>Autor: Antonín Vokoun<p>
                   <p>Rok vydání: 2020<p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
@@ -63,11 +63,11 @@
                   <p>Autor: Peter Benchley<p>
                   <p>Rok vydání: 1998<p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
@@ -78,11 +78,11 @@
                   <p>Autor: J.K Rowling<p>
                   <p>Rok vydání: 2003<p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
@@ -93,11 +93,11 @@
                   <p>Autor: Antonín Vokoun<p>
                   <p>Rok vydání: 2020<p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
@@ -108,11 +108,11 @@
                   <p>Autor: Peter Benchley<p>
                   <p>Rok vydání: 1998<p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
@@ -123,11 +123,11 @@
                   <p>Autor: J.K Rowling<p>
                   <p>Rok vydání: 2003<p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
@@ -138,11 +138,11 @@
                   <p>Autor: Antonín Vokoun<p>
                   <p>Rok vydání: 2020<p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
@@ -153,11 +153,11 @@
                   <p>Autor: Peter Benchley<p>
                   <p>Rok vydání: 1998<p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
@@ -168,13 +168,21 @@
                   <p>Autor: J.K Rowling<p>
                   <p>Rok vydání: 2003<p>
                 </section>
-                <a href="./koupit.html" class="button" role="button">
+                <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
                     Koupit 
                   </span>
-                </a>
+                </div>
               </article>
             </div>
+          </div>
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+
           </div>
         </div>
         <footer>
@@ -223,5 +231,6 @@
           </div>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
