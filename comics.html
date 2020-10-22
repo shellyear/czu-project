@@ -44,9 +44,11 @@
                   <img class="book-img" src="./static/bookImg2.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Jaws</h2>
-                  <p>Autor: Peter Benchley<p>
-                  <p>Cena: 1000 kč</p>
+                  <h3 class="book-title">Jaws</h3>
+                  <p>Autor: Peter Benchley</p>
+                  <p>Cena: 
+                    <span>1000</span> kč
+                  </p>
                 </section>
                 <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
@@ -59,9 +61,11 @@
                   <img class="book-img" src="./static/bookImg2.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Jaws</h2>
-                  <p>Autor: Peter Benchley<p>
-                  <p>Cena: 1000 kč</p>
+                  <h3 class="book-title">Jaws</h3>
+                  <p>Autor: Peter Benchley</p>
+                  <p>Cena: 
+                    <span>1000</span> kč
+                  </p>
                 </section>
                 <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
@@ -74,9 +78,11 @@
                   <img class="book-img" src="./static/bookImg2.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Jaws</h2>
-                  <p>Autor: Peter Benchley<p>
-                  <p>Cena: 1000 kč</p>
+                  <h3 class="book-title">Jaws</h3>
+                  <p>Autor: Peter Benchley</p>
+                  <p>Cena: 
+                    <span>1000</span> kč
+                  </p>
                 </section>
                 <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
@@ -89,9 +95,11 @@
                   <img class="book-img" src="./static/bookImg2.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Jaws</h2>
-                  <p>Autor: Peter Benchley<p>
-                  <p>Cena: 1000 kč</p>
+                  <h3 class="book-title">Jaws</h3>
+                  <p>Autor: Peter Benchley</p>
+                  <p>Cena: 
+                    <span>1000</span> kč
+                  </p>
                 </section>
                 <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
@@ -104,9 +112,11 @@
                   <img class="book-img" src="./static/bookImg2.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Jaws</h2>
-                  <p>Autor: Peter Benchley<p>
-                  <p>Cena: 1000 kč</p>
+                  <h3 class="book-title">Jaws</h3>
+                  <p>Autor: Peter Benchley</p>
+                  <p>Cena: 
+                    <span>1000</span> kč
+                  </p>
                 </section>
                 <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
@@ -119,9 +129,11 @@
                   <img class="book-img" src="./static/bookImg2.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Jaws</h2>
-                  <p>Autor: Peter Benchley<p>
-                  <p>Cena: 1000 kč</p>
+                  <h3 class="book-title">Jaws</h3>
+                  <p>Autor: Peter Benchley</p>
+                  <p>Cena: 
+                    <span>1000</span> kč
+                  </p>
                 </section>
                 <div class="button" id="myBtn" role="button">
                   <span class="button-inner">
@@ -135,7 +147,25 @@
             <!-- Modal content -->
             <div class="modal-content">
               <span class="close">&times;</span>
-              <p>Some text in the Modal..</p>
+              <article class="credit-card">
+                <img class="credit-card-img" src="./static/credit-card.svg" alt="credit-card">
+                <form action="/action_page.php">
+                  <h3 class="form-title">Nazev</h3>
+                  <div class="form-block">
+                    <label for="cena">Cena:</label>
+                    <input maxlength="5" class="form-input" type="text" id="cena" name="cena" value="0">
+                  </div>
+                  <div class="form-block">
+                    <label for="card-number">Číslo karty</label>
+                    <input class="form-input" type="text" id="card-number" name="card-number" value="">
+                  </div>
+                  <div class="form-block">
+                    <label for="card-number">CVV</label>
+                    <input maxlength="3" class="form-input" type="text" id="card-number" name="card-number" value="">
+                  </div>
+                  <input class="submit" type="submit" value="Zaplatit">
+                </form> 
+              </article>
             </div>
 
           </div>
@@ -186,6 +216,7 @@
           </div>
         </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
