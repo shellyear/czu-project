@@ -3,56 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="https://kit.fontawesome.com/7b68446109.js" crossorigin="anonymous"></script>
+    <script src = script.js async></script>
   <title>Úvodní stránka</title>
 </head>
 <body>
   <div class="App">
     <div class='container'>
         <header>
-          <div class='logo-wrapper'>
-            <img class='logo' src="./static/book-shop.png" />
-            <h3 class='logo-title'>Book E-shop</h3>
-          </div>
-          <input class="search-bar" type="text" placeholder="Hledejte knížky.." />
-          <nav>
-            <ul class="menu">
-              <li>
-                <a class='active' href='index.html'>Hlavní</a>
-              </li>
-              <li>
-                <a href='novels.html'>Romány</a>
-              </li>
-              <li>
-                <a href='sci-fi.html'>Vědecké publikace</a>
-              </li>
-              <li>
-                <a href='comics.html'>Komiksy</a>
-              </li>
-              <li>
-                <a href='about.html'>O nás</a>
-              </li>
-            </ul>
-          </nav>
-        </header>
+                    <div class='logo-wrapper'>
+                        <a href = "index.html"><img class='logo' src="./static/book-shop.png" /></a>
+                        <h1 class='logo-title'>Book E-shop</h1>
+                    </div>
+                    <form class="search-bar" action="index.html">
+                        <input type="text" placeholder="Hledejte knížky.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                    <div id="menu-bar" class="desktop-hide">
+                        <div id="menu" onclick="onClickMenu()">
+                           <div id="bar1" class="bar"></div>
+                            <div id="bar2" class="bar"></div>
+                            <div id="bar3" class="bar"></div>
+                        </div>
+                        <ul class="mobile-nav" id="mobile-nav">
+                            <li><a class='active' href='index.html'>Hlavní</a></li>
+                            <li><a href='novels.html'>Romány</a> </li>
+                            <li><a href='sci-fi.html'>Vědecké publikace</a> </li>
+                            <li><a href='comics.html'>Komiksy</a> </li>
+                            <li><a href='about.html'>O nás</a> </li>
+                            <li><a href = cart.html > <i class="fas fa-shopping-cart"></i> </a></li>
+                        </ul>
+                    </div>
+                    <nav class="mobile-hide">
+                        <ul class="menu">
+                            <li>
+                                <a class='active' href='index.html'>Hlavní</a>
+                            </li>
+                            <li>
+                                <a href='novels.html'>Romány</a>
+                            </li>
+                            <li>
+                                <a href='sci-fi.html'>Vědecké publikace</a>
+                            </li>
+                            <li>
+                                <a href='comics.html'>Komiksy</a>
+                            </li>
+                            <li>
+                                <a href='about.html'>O nás</a>
+                            </li>
+                            <li>
+                                <a href = cart.html > <i class="fas fa-shopping-cart"></i> </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
         <div id="main">
           <div class='page'>
-            <h1 class="page-title">Nejprodávanější</h1>
+            <h2 class="page-title">Nejprodávanější</h2>
             <div class="book-container">
               <article class="book-card">
                 <div class="img-wrapper">
-                  <img class="book-img" src="./static/bookImg.jpg" alt="book">
+                  <img class="book-img" src="./static/bookImg4.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Kačer Donald Vs. Batman : The Dark menace</h2>
+                  <h3 class="book-title">Kačer Donald Vs. Batman : The Dark menace</h3>
                   <p>Autor: Antonín Vokoun</p>
                   <p>Cena: 
                     <span id="price-number">1000</span> kč
                   </p>
                 </section>
-                <div class="button" id="myBtn" role="button">
+                <div class="button" id="myBtn" role="button" onClick="addToBasket({
+                  title: 'Kačer Donald Vs. Batman : The Dark menace',
+                  autor: 'Autor: Antonín Vokoun',
+                  price: 1000,  
+                })">
                   <span class="button-inner">
-                    Koupit 
+                    Vložit do košíku
                   </span>
                 </div>
               </article>
@@ -61,15 +88,19 @@
                   <img class="book-img" src="./static/bookImg2.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Jaws</h2>
+                  <h3 class="book-title">Jaws</h3>
                   <p>Autor: Peter Benchley</p>
                   <p>Cena: 
                     <span id="price-number">1000</span> kč
                   </p>
                 </section>
-                <div class="button" id="myBtn" role="button">
+                <div class="button" id="myBtn" role="button" onClick="addToBasket({
+                    title: 'Jaws',
+                    autor: 'Peter Benchley',
+                    price: 1000,  
+                  })">
                   <span class="button-inner">
-                    Koupit 
+                    Vložit do košíku
                   </span>
                 </div>
               </article>
@@ -78,32 +109,40 @@
                   <img class="book-img" src="./static/bookImg3.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Harry Potter: Prisoner of Azkaban</h2>
+                  <h3 class="book-title">Harry Potter: Prisoner of Azkaban</h3>
                   <p>Autor: J.K Rowling</p>
-                  <p>Cena: 
+                  <p>Cena:
                     <span id="price-number">1000</span> kč
                   </p>
                 </section>
-                <div class="button" id="myBtn" role="button">
+                <div class="button" id="myBtn" role="button" onClick="addToBasket({
+                    title: 'Harry Potter: Prisoner of Azkaban',
+                    autor: 'J.K Rowling',
+                    price: 1000,  
+                  })">
                   <span class="button-inner">
-                    Koupit 
+                    Vložit do košíku
                   </span>
                 </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
-                  <img class="book-img" src="./static/bookImg.jpg" alt="book">
+                  <img class="book-img" src="./static/bookImg4.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Kačer Donald Vs. Batman : The Dark menace</h2>
+                  <h3 class="book-title">Kačer Donald Vs. Batman : The Dark menace</h3>
                   <p>Autor: Antonín Vokoun</p>
                   <p>Cena: 
                     <span id="price-number">1000</span> kč
                   </p>
                 </section>
-                <div class="button" id="myBtn" role="button">
+                <div class="button" id="myBtn" role="button" onClick="addToBasket({
+                    title: 'Kačer Donald Vs. Batman : The Dark menace',
+                    autor: 'Autor: Antonín Vokoun',
+                    price: 1000,  
+                  })">
                   <span class="button-inner">
-                    Koupit 
+                    Vložit do košíku
                   </span>
                 </div>
               </article>
@@ -112,15 +151,40 @@
                   <img class="book-img" src="./static/bookImg2.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Jaws</h2>
+                  <h3 class="book-title">Jaws</h3>
                   <p>Autor: Peter Benchley</p>
                   <p>Cena: 
                     <span id="price-number">1000</span> kč
                   </p>
                 </section>
-                <div class="button" id="myBtn" role="button">
+                <div class="button" id="myBtn" role="button" onClick="addToBasket({
+                    title: 'Jaws',
+                    autor: 'Peter Benchley',
+                    price: 1000,  
+                  })">
                   <span class="button-inner">
-                    Koupit 
+                    Vložit do košíku
+                  </span>
+                </div>
+              </article>
+                <article class="book-card">
+                <div class="img-wrapper">
+                  <img class="book-img" src="./static/bookImg.jpg" alt="book">
+                </div>
+                <section class="book-content">
+                  <h3 class="book-title">Marťan</h3>
+                  <p>Autor: Andy Weir</p>
+                  <p>Cena: 
+                    <span id="price-number">1000</span> kč
+                  </p>
+                </section>
+                <div class="button" id="myBtn" role="button" onClick="addToBasket({
+                  title: 'Marťan',
+                  autor: 'Andy Weir',
+                  price: 1000,  
+                })">
+                  <span class="button-inner">
+                    Vložit do košíku
                   </span>
                 </div>
               </article>
@@ -129,32 +193,40 @@
                   <img class="book-img" src="./static/bookImg3.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Harry Potter: Prisoner of Azkaban</h2>
+                  <h6 class="book-title">Harry Potter: Prisoner of Azkaban</h6>
                   <p>Autor: J.K Rowling</p>
                   <p>Cena: 
                     <span id="price-number">1000</span> kč
                   </p>
                 </section>
-                <div class="button" id="myBtn" role="button">
+                <div class="button" id="myBtn" role="button" onClick="addToBasket({
+                    title: 'Harry Potter: Prisoner of Azkaban',
+                    autor: 'J.K Rowling',
+                    price: 1000,  
+                  })">
                   <span class="button-inner">
-                    Koupit 
+                    Vložit do košíku
                   </span>
                 </div>
               </article>
               <article class="book-card">
                 <div class="img-wrapper">
-                  <img class="book-img" src="./static/bookImg.jpg" alt="book">
+                  <img class="book-img" src="./static/bookImg4.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Kačer Donald Vs. Batman : The Dark menace</h2>
+                  <h3 class="book-title">Kačer Donald Vs. Batman : The Dark menace</h3>
                   <p>Autor: Antonín Vokoun</p>
                   <p>Cena: 
                     <span id="price-number">1000</span> kč
                   </p>
                 </section>
-                <div class="button" id="myBtn" role="button">
+                <div class="button" id="myBtn" role="button" onClick="addToBasket({
+                    title: 'Kačer Donald Vs. Batman : The Dark menace',
+                    autor: 'Autor: Antonín Vokoun',
+                    price: 1000,  
+                  })">
                   <span class="button-inner">
-                    Koupit 
+                    Vložit do košíku
                   </span>
                 </div>
               </article>
@@ -163,15 +235,19 @@
                   <img class="book-img" src="./static/bookImg2.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Jaws</h2>
+                  <h3 class="book-title">Jaws</h3>
                   <p>Autor: Peter Benchley</p>
                   <p>Cena: 
                     <span id="price-number">1000</span> kč
                   </p>
                 </section>
-                <div class="button" id="myBtn" role="button">
+                <div class="button" id="myBtn" role="button" onClick="addToBasket({
+                    title: 'Jaws',
+                    autor: 'Peter Benchley',
+                    price: 1000,  
+                  })">
                   <span class="button-inner">
-                    Koupit 
+                    Vložit do košíku
                   </span>
                 </div>
               </article>
@@ -180,50 +256,28 @@
                   <img class="book-img" src="./static/bookImg3.jpg" alt="book">
                 </div>
                 <section class="book-content">
-                  <h3 class="book-title">Harry Potter: Prisoner of Azkaban</h2>
+                  <h3 class="book-title">Harry Potter: Prisoner of Azkaban</h3>
                   <p>Autor: J.K Rowling</p>
                   <p>Cena: 
                     <span id="price-number">1000</span> kč
                   </p>
                 </section>
-                <div class="button" id="myBtn" role="button">
+                <div class="button" id="myBtn" role="button" onClick="addToBasket({
+                    title: 'Harry Potter: Prisoner of Azkaban',
+                    autor: 'J.K Rowling',
+                    price: 1000,  
+                  })">
                   <span class="button-inner">
-                    Koupit 
+                    Vložit do košíku
                   </span>
                 </div>
-              </article>
+              </article>         
             </div>
-          </div>
-          <div id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <article class="credit-card">
-                <img class="credit-card-img" src="./static/credit-card.svg" alt="credit-card">
-                <form action="/action_page.php">
-                  <h3 class="form-title">Nazev</h3>
-                  <div class="form-block">
-                    <label for="cena">Cena:</label>
-                    <input maxlength="5" class="form-input" type="text" id="cena" name="cena" value="0">
-                  </div>
-                  <div class="form-block">
-                    <label for="card-number">Číslo karty</label>
-                    <input class="form-input" type="text" id="card-number" name="card-number" value="">
-                  </div>
-                  <div class="form-block">
-                    <label for="card-number">CVV</label>
-                    <input maxlength="3" class="form-input" type="text" id="card-number" name="card-number" value="">
-                  </div>
-                  <input class="submit" type="submit" value="Zaplatit">
-                </form> 
-              </article>
-            </div>
-
           </div>
         </div>
         <footer>
           <div class="footer-block">
-            <h2 class='footer-title'>Poradna pro zákazníky</h2>
+            <h4 class='footer-title'>Poradna pro zákazníky</h4>
             <ul class="footer-list">
               <li>
                 <a href="#">Zásady ochrany osobních údajů</a>
@@ -243,7 +297,7 @@
             </ul>
           </div>
           <div class="footer-block">
-            <h2 class='footer-title'>Poradna pro zákazníky</h2>
+            <h4 class='footer-title'>Poradna pro zákazníky</h4>
               <ul class="footer-list">
                 <li>
                   <a href="#">Zásady ochrany osobních údajů</a>
@@ -267,7 +321,9 @@
           </div>
         </footer>
     </div>
+    <script src="jquery-3.5.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
+  </div>
 </body>
 </html>

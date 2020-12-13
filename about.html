@@ -4,40 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/index.css">
-  <title>Úvodní stránka</title>
+  <script src="https://kit.fontawesome.com/7b68446109.js" crossorigin="anonymous"></script>
+  <script src = script.js async></script>
+  <title>O nás</title>
 </head>
 <body>
   <div class="App">
     <div class='container'>
-        <header>
-          <div class='logo-wrapper'>
-            <img class='logo' src="./static/book-shop.png" />
-            <h3 class='logo-title'>Book E-shop</h3>
+      <header>
+        <div class='logo-wrapper'>
+          <a href = "index.html"><img class='logo' src="./static/book-shop.png" /></a>
+          <h1 class='logo-title'>Book E-shop</h1>
+        </div>
+        <form class="search-bar" action="cart.html">
+          <input type="text" placeholder="Hledejte knížky.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <div id="menu-bar" class="desktop-hide">
+          <div id="menu" onclick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
           </div>
-          <input class="search-bar"  type="text" placeholder="Hledejte knížky.." />
-          <nav>
-            <ul class="menu">
-              <li>
-                <a href='index.html'>Hlavní</a>
-              </li>
-              <li>
-                <a href='novels.html'>Romány</a>
-              </li>
-              <li>
-                <a href='sci-fi.html'>Vědecké publikace</a>
-              </li>
-              <li>
-                <a href='comics.html'>Komiksy</a>
-              </li>
-              <li>
-                <a class="active" href='about.html'>O nás</a>
-              </li>
-            </ul>
-          </nav>
-        </header>
+          <ul class="mobile-nav" id="mobile-nav">
+            <li><a href='index.html'>Hlavní</a></li>
+            <li><a href='novels.html'>Romány</a> </li>
+            <li><a href='sci-fi.html'>Vědecké publikace</a> </li>
+            <li><a href='comics.html'>Komiksy</a> </li>
+            <li><a class='active' href='about.html'>O nás</a> </li>
+            <li><a href = cart.html > <i class="fas fa-shopping-cart"></i> </a></li>
+          </ul>
+        </div>
+        <nav class="mobile-hide">
+          <ul class="menu">
+            <li>
+              <a href='index.html'>Hlavní</a>
+            </li>
+            <li>
+              <a href='novels.html'>Romány</a>
+            </li>
+            <li>
+              <a href='sci-fi.html'>Vědecké publikace</a>
+            </li>
+            <li>
+              <a href='comics.html'>Komiksy</a>
+            </li>
+            <li>
+              <a class='active' href='about.html'>O nás</a>
+            </li>
+            <li>
+              <a href = cart.html > <i class="fas fa-shopping-cart"></i> </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
         <div id="main">
           <div class='page'>
-            <h1 class="page-title">Něco o nás</h1>
+            <h2 class="page-title">Něco o nás</h2>
             <p class="text">
               Společnost MEGABOOKS CZ působí na českém trhu již více než 20 let a zaměřuje se na dovoz a distribuci zahraniční cizojazyčné literatury. Našimi zákazníky jsou nejen sami čtenáři, ale také maloobchodní prodejny či velkoodběratelé. Rovněž spolupracujeme s mnoha vzdělávacími institucemi, jako jsou státní i soukromé školy, jazykové školy, knihovny či univerzity.
 
@@ -69,7 +92,7 @@ Milovníci knih nás určitě znají díky naší síti knihkupectví Oxford Boo
         </div>
         <footer>
           <div class="footer-block">
-            <h2 class='footer-title'>Poradna pro zákazníky</h2>
+            <h3 class='footer-title'>Poradna pro zákazníky</h3>
             <ul class="footer-list">
               <li>
                 <a href="#">Zásady ochrany osobních údajů</a>
@@ -89,7 +112,7 @@ Milovníci knih nás určitě znají díky naší síti knihkupectví Oxford Boo
             </ul>
           </div>
           <div class="footer-block">
-            <h2 class='footer-title'>Poradna pro zákazníky</h2>
+            <h3 class='footer-title'>Poradna pro zákazníky</h3>
               <ul class="footer-list">
                 <li>
                   <a href="#">Zásady ochrany osobních údajů</a>
@@ -113,5 +136,9 @@ Milovníci knih nás určitě znají díky naší síti knihkupectví Oxford Boo
           </div>
         </footer>
     </div>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </div>
 </body>
 </html>

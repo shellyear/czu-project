@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="https://kit.fontawesome.com/7b68446109.js" crossorigin="anonymous"></script>
+    <title>Doručovací údaje</title>
+</head>
+<body>
+<div class="App">
+    <div class='container'>
+        <header>
+            <div class='logo-wrapper'>
+                <a href = "index.html"><img class='logo' src="./static/book-shop.png" /></a>
+                <h1 class='logo-title'>Book E-shop</h1>
+            </div>
+            <form class="search-bar" action="cart.html">
+                <input type="text" placeholder="Hledejte knížky.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div id="menu-bar" class="desktop-hide">
+                <div id="menu" onclick="onClickMenu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+                <ul class="mobile-nav" id="mobile-nav">
+                    <li><a href='index.html'>Hlavní</a></li>
+                    <li><a href='novels.html'>Romány</a> </li>
+                    <li><a href='sci-fi.html'>Vědecké publikace</a> </li>
+                    <li><a href='comics.html'>Komiksy</a> </li>
+                    <li><a href='about.html'>O nás</a> </li>
+                    <li><a class='active' href = cart.html > <i class="fas fa-shopping-cart"></i> </a></li>
+                </ul>
+            </div>
+            <nav class="mobile-hide">
+                <ul class="menu">
+                    <li>
+                        <a href='index.html'>Hlavní</a>
+                    </li>
+                    <li>
+                        <a href='novels.html'>Romány</a>
+                    </li>
+                    <li>
+                        <a href='sci-fi.html'>Vědecké publikace</a>
+                    </li>
+                    <li>
+                        <a href='comics.html'>Komiksy</a>
+                    </li>
+                    <li>
+                        <a href='about.html'>O nás</a>
+                    </li>
+                    <li>
+                        <a class='active' href = cart.html > <i class="fas fa-shopping-cart"></i> </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="main">
+            <div class='page'>
+                <h2 class="page-title">Doručovací údaje</h2>
+                <div class="delivery-container">
+                <div class="delivery-details">
+                    <h2>Fakturační údaje</h2>
+                    <label for="name"><i class="fa fa-user"></i> Celé jméno</label>
+                    <input type="text" id="name" name="firstname" placeholder="Jan Novák">
+                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                    <input type="text" id="email" name="email" placeholder="novak@priklad.com">
+                    <label for="adr"><i class="fa fa-address-card-o"></i> Adresa</label>
+                    <input type="text" id="adr" name="address" placeholder="Dejvická 696">
+                    <label for="city"><i class="fas fa-city"></i> Město</label>
+                    <input type="text" id="city" name="city" placeholder="Praha">
+                    <label for="psc"><i class="fas fa-mail-bulk"></i>PSČ</label>
+                    <input type="text" id="psc" name="zip" placeholder="11100">
+                </div>
+
+                    <div class="payment-details">
+                        <h2>Platební detaily</h2>
+                        <label for="cname">Jméno na kreditní kartě</label>
+                        <input type="text" id="cname" name="cardname" placeholder="Jan Novák">
+                        <label for="ccnum">Číslo kreditní karty</label>
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                        <label for="expyear">Datum konce platnosti</label>
+                        <input type="text" id="expyear" name="expyear" placeholder="05/21">
+                        <label for="cvc">CVC</label>
+                        <input type="text" id="cvc" name="cvc" placeholder="352">
+                    </div>
+                    <div class="delivery-type">
+                        <h2>Typ doručení</h2>
+                        <label for="post">Pošta</label><br>
+                        <input type="radio" id="post" name="post">
+                        <label for="ppl">PPL</label><br>
+                        <input type="radio" id="ppl" name="ppl" >
+                        <label for="zas">Zásilkovna</label>
+                        <input type="radio" id="zas" name="zasilkovna">
+                    </div>
+                </div>
+                <div class="nav-btn">
+                <button class="btn-back" type="button"> <a href="cart.html">Zpět do košíku</a>
+                <button class="btn-next" type="button"> <a href="summary.html">Pokračovat v objednávce</a>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-block">
+                <h4 class='footer-title'>Poradna pro zákazníky</h4>
+                <ul class="footer-list">
+                    <li>
+                        <a href="#">Zásady ochrany osobních údajů</a>
+                    </li>
+                    <li>
+                        <a href="#">Obchodní podmínky pro maloobchod</a>
+                    </li>
+                    <li>
+                        <a href="#">Obchodní podmínky pro podnikatele</a>
+                    </li>
+                    <li>
+                        <a href="#">Reklamační řád pro spotřebitele</a>
+                    </li>
+                    <li>
+                        <a href="#">Podmínky užití webového rozhraní</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-block">
+                <h4 class='footer-title'>Poradna pro zákazníky</h4>
+                <ul class="footer-list">
+                    <li>
+                        <a href="#">Zásady ochrany osobních údajů</a>
+                    </li>
+                    <li>
+                        <a href="#">Obchodní podmínky pro maloobchod</a>
+                    </li>
+                    <li>
+                        <a href="#">Obchodní podmínky pro podnikatele</a>
+                    </li>
+                    <li>
+                        <a href="#">Reklamační řád pro spotřebitele</a>
+                    </li>
+                    <li>
+                        <a href="#">Podmínky užití webového rozhraní</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='footer-block'>
+                <img class="cards" src="https://bookshop.vshcdn.net/img/gopay2.png" />
+            </div>
+        </footer>
+    </div>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
