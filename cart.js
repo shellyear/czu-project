@@ -89,10 +89,6 @@ JSON.parse(localStorage.getItem('cardBasket')).forEach(({ title, price, count, i
   const mainDiv = document.createElement('div');
   mainDiv.setAttribute('class', 'cart-row');
   mainDiv.setAttribute('id', id);
-  // console.log('target', target);
-  // console.log('mainDiv', mainDiv.id);
-  // const id = title.split(" ");
-  console.log('id', id);
   mainDiv.innerHTML = `
     <div class="cart-item cart-column">
         <img class="cart-item-image" src=${imgUrl} alt="book" width="100" height="100">
